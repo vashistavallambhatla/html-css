@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Bathroom Carousel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 20vh;
+            overflow: hidden;
+        }
+
+        .carousel {
+            width: 400%;
+            height: 100%;
+            display: flex;
+            animation: slideshow 8s linear infinite;
+        }
+
+        .slide {
+            width: 25%;
+            height: 100%;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes slideshow {
+            0% { transform: translateX(0); }
+            23% { transform: translateX(0); }
+            25% { transform: translateX(-25%); }
+            48% { transform: translateX(-25%); }
+            50% { transform: translateX(-50%); }
+            73% { transform: translateX(-50%); }
+            75% { transform: translateX(-75%); }
+            98% { transform: translateX(-75%); }
+            100% { transform: translateX(0); }
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(128, 128, 128, 0.8);
+            padding: 2rem;
+            color: white;
+            font-family: Georgia, serif;
+            text-align: center;
+        }
+
+        .overlay p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Pause animation on hover */
+        .carousel-container:hover .carousel {
+            animation-play-state: paused;
+        }
+
+        /* Dots navigation */
+        .dots {
+            position: absolute;
+            bottom: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 2;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .dot.active {
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="slide">
+                <img src="https://277fifthnomad.com/wp-content/uploads/slider/cache/0924b66c93664f588281c9d88c425d78/Bath.webp" alt="Luxury bathroom with city view">
+            </div>
+            <div class="slide">
+                <img src="https://277fifthnomad.com/wp-content/uploads/slider/cache/da96573268451f031776977e77da4fc6/TW__5764_HIGH-RES.webp" alt="Modern bathroom interior">
+            </div>
+            <div class="slide">
+                <img src="https://277fifthnomad.com/wp-content/uploads/slider/cache/bc50c642d9ac2946f389e307a5348d9c/Fluff_TW__5521_HIGH-RES.webp" alt="Elegant bathroom design">
+            </div>
+            <div class="slide">
+                <img src="https://277fifthnomad.com/wp-content/uploads/slider/cache/8cc2d233be9092a389a8e783ce0234e9/Kitchens.webp" alt="Contemporary bathroom space">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

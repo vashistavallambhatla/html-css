@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>277 Fifth Avenue NoMad - Amenities</title>
+    <style>
+       /* Container styles */
+.amenities-slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #3B3D47;
+}
+
+/* Slider styles */
+.amenities-slider {
+    display: flex;
+    animation: slideshow-amenities 16s infinite;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Slide styles */
+.amenities-slide {
+    flex: 0 0 33.33%; /* Each slide takes up one-third of the container */
+    text-align: center;
+    position: relative;
+}
+
+.placeholder {
+    flex: 0 0 33.33%; /* Ensure centering of first and last slides */
+    visibility: hidden;
+}
+
+.amenities-slide img {
+    width: 100%;
+    max-height: 484px;
+    object-fit: cover;
+}
+
+.image-title {
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 14px !important;
+    margin: 10px 0;
+}
+
+.image-desc {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Keyframes for sliding effect */
+@keyframes slideshow-amenities {
+    0%, 20% { transform: translateX(0); } /* Show the first slide centered */
+    25%, 45% { transform: translateX(-33.33%); } /* Show the second slide centered */
+    50%, 70% { transform: translateX(-66.66%); } /* Show the third slide centered */
+    75%, 95% { transform: translateX(-100%); } /* Show the fourth slide centered */
+    100% { transform: translateX(-133.33%); } /* Reset to the first */
+}
+
+    </style>
+</head>
+<body>
+  <section class="amenities-section">
+    <h1 class="title">Amenities</h1>
+    <div class="amenities-slider-container">
+        <div class="amenities-slider">
+            <!-- Placeholder slide for centering -->
+            <div class="amenities-slide placeholder"></div>
+            <!-- Actual slides -->
+            <div class="amenities-slide">
+                <img src="https://277fifthnomad.com/wp-content/uploads/slider/cache/0cbdf76293e7b0be1a0ed6d0f7cd8559/TW__5477_HIGH-RES.webp" alt="Lobby Library" class="ameneties-img">
+                <div class="image-title">Lobby library</div>
+                <div class="image-desc">A curated entry with a dramatic, double-height bookcase wall.</div>
+            </div>
+            <div class="amenities-slide">
+                <img src="https://277fifthnomad.com/wp-content/uploads/slider/cache/0cbdf76293e7b0be1a0ed6d0f7cd8559/TW__5477_HIGH-RES.webp" alt="Setback Terrace" class="ameneties-img">
+                <div class="image-title">SETBACK TERRACE</div>
+                <div class="image-desc">A furnished and landscaped common setback Fifth Avenue terrace.</div>
+            </div>
+            <div class="https://277fifthnomad.com/wp-content/uploads/slider/cache/0cbdf76293e7b0be1a0ed6d0f7cd8559/TW__5477_HIGH-RES.webp">
+                <img src="image3.webp" alt="Fitness Club" class="ameneties-img">
+                <div class="image-title">FITNESS CLUB</div>
+                <div class="image-desc">An expansive fitness space with a separate training and yoga studio.</div>
+            </div>
+            <div class="https://277fifthnomad.com/wp-content/uploads/slider/cache/0cbdf76293e7b0be1a0ed6d0f7cd8559/TW__5477_HIGH-RES.webp">
+                <img src="image4.webp" alt="Kid's Club" class="ameneties-img">
+                <div class="image-title">KID’S CLUB</div>
+                <div class="image-desc">This playful space bursting with games and activities to explore.</div>
+            </div>
+            <!-- Placeholder slide for centering -->
+            <div class="amenities-slide placeholder"></div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
